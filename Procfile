@@ -1,1 +1,2 @@
-web: gunicorn pyschemer.wsgi --log-file -
+web
+gunicorn pyschemer.wsgi --log-file -
