@@ -40,7 +40,7 @@ jobs:
  #         pipenv run flake8 .
       - name: Test with pytest
         run: |
-          pipenv run pytest pythonpro --cov=pythonpro
+          pipenv run pytest pyschemer --cov=pyschemer
       - name: Posting Coverage
         env:
           CODECOV_TOKEN: "c27b00d4-0e61-451f-a461-b584d7de439f"
