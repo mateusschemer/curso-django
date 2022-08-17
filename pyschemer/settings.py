@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os.path
 from functools import partial
-from pathlib import Path
 
 import dj_database_url
 from decouple import config
+from decouple import Csv
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,15 +27,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-from decouple import Csv
-
-DEBUG = config('DEBUG', cast= bool)
-
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast= Csv())
 
 
+DEBUG = config('DEBUG', cast=bool)
 
-# Application definition
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+
+
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
